@@ -10,11 +10,29 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #43AFFC;
+  background: #162E5C;
 }
-
 .main-container{
   width: 600px;
-  background: #183362;
-  border-radius: 20px;
+  background: #fff;
+  border-radius: 7px;
+}
+.main-container header{
+  display: flex;
+  font-size: 30px;
+  font-weight: 500;
+  color: black;
+  padding: 20px 15px;
+  justify-content: center;
+}
+
+.main-container.active header i{
+  margin-left: 5px;
+  font-size: 30px;
+}
+.main-container .search-city{
+  margin: 20px 25px 30px;
+}
+.main-container.active .search-city{
+  display: none;
 }
