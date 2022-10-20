@@ -17,11 +17,11 @@ export const Weather = () => {
     }
 
     return (
-        <div class="main-container">
+        <div className="main-container">
             <header>Weather App</header>
-            <section class="search-city">
-                <p class="info-txt"></p>
-                <div class="content">
+            <section className="search-city">
+                <p className="info-txt"></p>
+                <div className="content">
                     <input
                         type="text"
                         required
@@ -29,7 +29,7 @@ export const Weather = () => {
                             setSearch(e.target.value);
                         }}
                     />
-                    <div class="separator"></div>
+                    <div className="separator"></div>
                     <button
                         onClick={function () {
                             fetchApi();
@@ -40,39 +40,39 @@ export const Weather = () => {
                 </div>
             </section>
             {city ? (
-                <section class="weather-details">
+                <section className="weather-details">
                     <img
                         src="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-512.png"
                         alt="Weather Icon"
                     />
-                    <div class="weather">{response.current.weather_descriptions[0]}</div>
-                    <div class="temp">
-                        <span class="numb">{response.current.temperature}</span>
-                        <span class="deg">°</span>C
+                    <div className="weather">{response.current.weather_descriptions[0]}</div>
+                    <div className="temp">
+                        <span className="numb">{response.current.temperature}</span>
+                        <span className="deg">°</span>C
                     </div>
-                    <div class="time">
+                    <div className="time">
                         <span>
                             <span>{response.location.localtime}</span>
                         </span>
                     </div>
-                    {/* <div class="">
+                    {/* <div className="">
                         <span>
                             <span>{response.current.mintemp}</span>
                             <span>{response.current.maxtemp}</span>
                         </span>
                     </div> */}
-                    <div class="bottom-details">
-                        <div class="column feels">
-                            <div class="details">
-                                <div class="temp">
-                                    <span class="numb-2">{response.current.feelslike}</span>
-                                    <span class="deg">°</span>C
+                    <div className="bottom-details">
+                        <div className="column feels">
+                            <div className="details">
+                                <div className="temp">
+                                    <span className="numb-2">{response.current.feelslike}</span>
+                                    <span className="deg">°</span>C
                                 </div>
                                 <p>Feel Like</p>
                             </div>
                         </div>
-                        <div class="column humidity">
-                            <div class="details">
+                        <div className="column humidity">
+                            <div className="details">
                                 <span>{response.current.wind_dir}</span>&nbsp;
                                 <span>{response.current.wind_speed}mi/h</span>
                                 <p>Wind</p>
