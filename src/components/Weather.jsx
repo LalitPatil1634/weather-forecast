@@ -8,7 +8,7 @@ export const Weather = () => {
 
     async function fetchApi() {
         let url =
-            "http://api.weatherstack.com/current?access_key=11e42dade7af105e7cf39db8b3458b51&query=" +
+            "http://api.weatherstack.com/current?access_key=698bf6c65c42dbfd36ae9b8947bf12a1&query=" +
             search;
         let res = await fetch(url);
         let jsonData = await res.json();
